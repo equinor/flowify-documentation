@@ -1,0 +1,7 @@
+site/public/
+site/resources/
+site/node_modules/
+site/dest
+.github
+Dockerfile
+.vscode/
