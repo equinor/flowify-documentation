@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.81.0" /><link rel="alternate" type="text/html" href="https://equinor.github.io/flowify-documentation/docs/component/marketplace/_print/">
+<meta name="generator" content="Hugo 0.81.0" /><link rel="alternate" type="text/html" href="https://equinor.github.io/flowify-documentation/docs/workflow/parallelization/_print/">
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
@@ -18,22 +18,22 @@
 <link rel="icon" type="image/png" href="../../../favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="../../../favicons/android-192x192.png" sizes="192x192">
 
-<title>Component marketplace | Flowify</title>
+<title>Parallel tasks in a workflow | Flowify</title>
 
 
-  <meta name="description" content="Component marketplace
+  <meta name="description" content="Parallel tasks in a workflow
 ">
-<meta property="og:title" content="Component marketplace" />
-<meta property="og:description" content="Component marketplace
+<meta property="og:title" content="Parallel tasks in a workflow" />
+<meta property="og:description" content="Parallel tasks in a workflow
 " />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://equinor.github.io/flowify-documentation/docs/component/marketplace/" /><meta property="og:site_name" content="Flowify" />
+<meta property="og:url" content="https://equinor.github.io/flowify-documentation/docs/workflow/parallelization/" /><meta property="og:site_name" content="Flowify" />
 
-<meta itemprop="name" content="Component marketplace">
-<meta itemprop="description" content="Component marketplace
+<meta itemprop="name" content="Parallel tasks in a workflow">
+<meta itemprop="description" content="Parallel tasks in a workflow
 "><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Component marketplace"/>
-<meta name="twitter:description" content="Component marketplace
+<meta name="twitter:title" content="Parallel tasks in a workflow"/>
+<meta name="twitter:description" content="Parallel tasks in a workflow
 "/>
 
 
@@ -156,17 +156,17 @@ if (!doNotTrack) {
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsworkspace-li">
   <a href="../../../docs/workspace/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsworkspace"><span class="">Workspace</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsworkflow-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsworkflow-li">
   <a href="../../../docs/workflow/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsworkflow"><span class="">Workflow</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsworkflowparallelization-li">
-  <a href="../../../docs/workflow/parallelization/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsworkflowparallelization"><span class="">Parallel tasks in a workflow</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsworkflowparallelization-li">
+  <a href="../../../docs/workflow/parallelization/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-docsworkflowparallelization"><span class="td-sidebar-nav-active-item">Parallel tasks in a workflow</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docscomponent-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docscomponent-li">
   <a href="../../../docs/component/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscomponent"><span class="">Components</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docscomponentbuild-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docscomponentbuild-li">
   <a href="../../../docs/component/build/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscomponentbuild"><span class="">Building components</span></a>
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docscomponentbuildbrick-li">
@@ -175,8 +175,8 @@ if (!doNotTrack) {
   <a href="../../../docs/component/build/graph/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscomponentbuildgraph"><span class="">Building components with graph</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docscomponentmarketplace-li">
-  <a href="../../../docs/component/marketplace/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-docscomponentmarketplace"><span class="td-sidebar-nav-active-item">Component marketplace</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docscomponentmarketplace-li">
+  <a href="../../../docs/component/marketplace/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscomponentmarketplace"><span class="">Component marketplace</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docssecret-li">
@@ -212,9 +212,9 @@ if (!doNotTrack) {
     
     
 
-    <a href="https://github.com/equinor/flowify-documentation/edit/main/site/content/en/docs/component/Marketplace/_index.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-    <a href="https://github.com/equinor/flowify-documentation/new/main/site/content/en/docs/component/Marketplace/_index.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" target="_blank"><i class="fa fa-edit fa-fw"></i> Create child page</a>
-    <a href="https://github.com/equinor/flowify-documentation/issues/new?title=Component%20marketplace" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+    <a href="https://github.com/equinor/flowify-documentation/edit/main/site/content/en/docs/workflow/parallelization/_index.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+    <a href="https://github.com/equinor/flowify-documentation/new/main/site/content/en/docs/workflow/parallelization/_index.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" target="_blank"><i class="fa fa-edit fa-fw"></i> Create child page</a>
+    <a href="https://github.com/equinor/flowify-documentation/issues/new?title=Parallel%20tasks%20in%20a%20workflow" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
     
       
       <a href="https://github.com/equinor/flowify-documentation/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
@@ -222,24 +222,13 @@ if (!doNotTrack) {
 
   
   
-    <a id="print" href="https://equinor.github.io/flowify-documentation/docs/component/marketplace/_print/"><i class="fa fa-print fa-fw"></i> Print entire section</a>
+    <a id="print" href="https://equinor.github.io/flowify-documentation/docs/workflow/parallelization/_print/"><i class="fa fa-print fa-fw"></i> Print entire section</a>
   
   </div>
 
 
             
 
-
-<div class="td-toc"><nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#component-marketplace">Component marketplace</a></li>
-      </ul>
-    </li>
-    <li><a href="#as-a-work-around-to-make-a-copy-of-a-component-your-can-copy-and-paste-the-manifest-in-the-component-editor">As a work around, to make a copy of a component, your can copy and paste the manifest in the component editor.</a></li>
-  </ul>
-</nav></div>
 
 
 
@@ -289,14 +278,14 @@ if (!doNotTrack) {
 
 
 <li class="breadcrumb-item" >
-	<a href="https://equinor.github.io/flowify-documentation/docs/component/">Components</a>
+	<a href="https://equinor.github.io/flowify-documentation/docs/workflow/">Workflow</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="https://equinor.github.io/flowify-documentation/docs/component/marketplace/">Component marketplace</a>
+	<a href="https://equinor.github.io/flowify-documentation/docs/workflow/parallelization/">Parallel tasks in a workflow</a>
 </li>
 
 	</ol>
@@ -304,8 +293,8 @@ if (!doNotTrack) {
 
             
 <div class="td-content">
-	<h1>Component marketplace</h1>
-  <div class="lead">Component marketplace</div>
+	<h1>Parallel tasks in a workflow</h1>
+  <div class="lead">Parallel tasks in a workflow</div>
 	<header class="article-meta">
 		
 		
@@ -321,10 +310,59 @@ if (!doNotTrack) {
 		
 		
 	</header>
-	<h3 id="component-marketplace">Component marketplace</h3>
-<p>Component marketplace allows you to share workspace component to users in other workspaces, increases reusability of your code. For example, a component for getting data from a Blob store only needs to be built once and made available to other projects.</p>
-<p><strong>Marketplace is planned to be implemented</strong></p>
-<h2 id="as-a-work-around-to-make-a-copy-of-a-component-your-can-copy-and-paste-the-manifest-in-the-component-editor">As a work around, to make a copy of a component, your can copy and paste the manifest in the component editor.</h2>
+	<h3 id="parallel-tasks-in-a-workflow">Parallel tasks in a workflow</h3>
+<p>It is possible to run parallel task on a list of input of the same type. It will speed up workflow when there is no interdependency between the parallelized tasks. In Flowify it is accomplisted by wrapping a component in a Map component. One of the inputs to the Map component has to be an parameter array (list), Flowify will spawn a new task for every item in the parameter array. Results from each parallel tasks will be concatenated into an parameter array as an output of the Mp component.</p>
+<h4 id="concept">Concept:</h4>
+<p><img src="./images/map_concept.png" alt="Photo"></p>
+<h4 id="setting-up-in-flowify">Setting up in Flowify:</h4>
+<p>Add a component that you would like to parallelize<img src="./images/add_comp.png" alt="Photo"></p>
+<p>Add a Map component under Functional component
+<img src="./images/add_map.png" alt="Photo"></p>
+<p>Select the component that you would like to wrap in a Map component
+<img src="./images/wrap_comp.png" alt="Photo"></p>
+<p>Create a parameter array (list) in the workflow inputs
+<img src="./images/add_input_arr.png" alt="Photo"></p>
+<p>Connect the parameter array input to the Map component
+<img src="./images/connect_array.png" alt="Photo"></p>
+<hr>
+<!---
+
+
+
+<div class="pageinfo pageinfo-primary">
+<p>This is a placeholder page that shows you how to use this template site.</p>
+
+</div>
+
+
+
+The Overview is where your users find out about your project. Depending on the size of your docset, you can have a separate overview page (like this one) or put your overview contents in the Documentation landing page (like in the Docsy User Guide).
+
+Try answering these questions for your user in this page:
+
+## What is it?
+
+Introduce your project, including what it does or lets you do, why you would use it, and its primary goal (and how it achieves it). This should be similar to your README description, though you can go into a little more detail here if you want.
+
+## Why do I want it?
+
+Help your user know if your project will help them. Useful information can include:
+
+* **What is it good for?**: What types of problems does your project solve? What are the benefits of using it?
+
+* **What is it not good for?**: For example, point out situations that might intuitively seem suited for your project, but aren't for some reason. Also mention known limitations, scaling issues, or anything else that might let your users know if the project is not for them.
+
+* **What is it *not yet* good for?**: Highlight any useful features that are coming soon.
+
+## Where should I go next?
+
+Give your users next steps from the Overview. For example:
+
+* [Getting Started](/docs/getting-started/): Get started with $project
+* [Examples](/docs/examples/): Check out some example code!
+
+--><blockquote>
+</blockquote>
 
         <div class="section-index">
     
