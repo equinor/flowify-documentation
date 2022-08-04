@@ -1,5 +1,11 @@
 # Flowify documentation
 
+This is the documentation repository for Floiwfy workflows manager
+
+Frontend source code https://github.com/equinor/flowify-workflows-UI
+
+Backend source code https://github.com/equinor/flowify-workflows-server
+
 We use [Docsy](https://github.com/google/docsy) a Hugo theme for our documentation site.
 
 The theme is included in this project as a Git submodule. Therefore to clone the repositort:
