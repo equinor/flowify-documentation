@@ -23,3 +23,9 @@ date: 2021-08-31
 **Brick** is the basic build block of component. It consists of a docker image, input arguments and outputs.
 
 **Graph** gives further ability to encapsulate more than one brick into a component. It provide a higher degre of abstraction and promote user (workflow builders) experience. It is essentially a workflow with outputs.
+
+----------------------------
+
+### Check out the some example Flowify components.
+
+https://github.com/orgs/equinor/repositories?q=flowify-component&type=all&language=&sort=

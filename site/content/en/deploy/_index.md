@@ -9,4 +9,3 @@ menu:
 
 ---
 
-These are some of the examples that are running on Flowify. We hope they will give you some inspirations.
