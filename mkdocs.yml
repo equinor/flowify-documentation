@@ -4,25 +4,31 @@ theme:
   features:
     - navigation.instant
     - navigation.tabs
+  logo: assets/logo.png
 extra_css:
   - stylesheets/extra.css
 repo_url: https://github.com/equinor/flowify-workflows-server
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 nav:
   - Home: index.md
   - Getting started: 
     - Prerequisites: getting_started.md
     - Local install: run_local.md
     - Deployment: run_k8s.md
-    - Access control: 
-      - Authentication and Authorization: auth.md
-      - Setting up roles: roles.md
+    - Authentication and Authorization: auth.md
+    - Setting up roles: roles.md
   - User Guide:
     - Concepts: concepts.md
     - Workspaces: workspaces.md
     - Components:
       - Concept: components.md
-      - Graph: graphs.md
       - Bricks: bricks.md
+      - Graph: graphs.md
     - Workflows:
       - Concept: workflows.md
       - Parallel tasks: map.md
@@ -31,7 +37,7 @@ nav:
     - Secrets: secrets.md
     - Volume mount: mounts.md
   - Developer Guide:
-    - Setup: dev_env.md
+    - Contributing: dev_env.md
     - Architecture: arch.md
     - Add OIDC provider: oidc.md
   - About: about.md
