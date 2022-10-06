@@ -5,7 +5,7 @@ The brick component is an representation of Argo Workflow's [`Container template
 The core of a brick component consists of a OCI compliant container image. It is then wrapped around by a layer of input/output parameters, secrets and volumes. They are applied to the container by Argo Workflow as follows:
 
 - Input parameters: Appened to the `Entrypoint` of the container
-- Output parameters: Copied and its value extracted from the container on completion
+- Output parameters: Copied and its values extracted from the container on completion
 - Input/Output Artifacts: Handled by Argo Workflow and copied to and from the container
 - Secrets: As environmental variables
 - Volumne mount: Mount to the container using a corresponding CSI driver
@@ -24,26 +24,35 @@ Prerequisities:
 - A published OCI compliant container image
 
 ### Basic setup
-In this example we will build a brick component that perform a HTTP GET request and save the response as output
+In this example we will build a brick component that perform a HTTP GET request and uses the response as output
 
-Example image: `ghcr.io/equinor/flowify-component-http:0.0.1` 
-
-[Repository](https://github.com/equinor/flowify-component-http)
+Example image: [`ghcr.io/equinor/flowify-component-http:0.0.1`](https://github.com/equinor/flowify-component-http)
 
 As Flowify uses Argo Workflows as executor, `ENTRYPOINT` must be defined explicitly in command:
 
-`Args` are appended to the `ENTRYPOINT` command. They can be fixed (e.g. `http_method=get`) or variables from input parameters (e.g. `url=`). In this example, the full run command will be 
+`Args` are appended to the `ENTRYPOINT` command. They can be fixed (e.g. `http_method=get`) or variables from input parameters (e.g. `url=`). In this example, the full command will be 
 
 `node ./src/index.js http_method=get url=<INPUT_URL_FROM_FLOWIFY_PARAMETER>`
 
-The container saves the GET response under `/tmp/files/output.json`. We will need define an output on the left pane and mapped it to Results on the right pane. Flowify/Argo Workflows will extract values from the file and passes to the next component as input.
+The container saves the GET response under `/tmp/files/output.json`. We will need to define an output on the left pane and mapped it to results on the right pane. Flowify/Argo Workflows will extract values from the file and passes to the next component as input.
 
 ### Using files (Artifacts)
-#### As input
+Instead of parameter values, it is possible to pass data across components using a file (Artifact). It is advised to limit the usage of Artifacts in order to keep data flow lineage explicit.
 
-#### As output
+[An Artifact Repository](https://argoproj.github.io/argo-workflows/configure-artifact-repository/) must be configured in Argo Workflows. Flowify does not verify the configurations.
+#### File as input
+
+#### File as output
 ### Add secrets
-
+To add secrets to the component, add them on the left-hand pane. The secrets will be available as Environmental variables inside the container with the same name. 
+Naming must not begin with digits and not contain spaces (use dash `_` ). It is conventional to use all uppercase characters.
 ### Add volume mount
+Add volume mount on the left-hand pane. The mount path to the container will be `/<NAME_OF_VOLUME>`. The path value can be passed to the container using `Args` as parameter input.
 
+If the container is run as non-root in Flowify, please make sure the container has read permission to the mount path. It can be achieved in Dockerfile for example:
+```bash
+RUN mkdir /<NAME_OF_VOLUME>
+RUN chmod -R 777 /<NAME_OF_VOLUME>
+```
+It is advised to limit the usage of volume mount in order to keep data flow lineage explicit.
 ### Versioning and modifications

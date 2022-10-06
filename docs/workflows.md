@@ -22,14 +22,22 @@ Workspace admin can delete workflow
 We will use the HTTP GET component from [building a brick](./bricks.md#building-a-brick) to fetch a random number from [https://www.randomnumberapi.com/api/v1.0/random?count=1](https://www.randomnumberapi.com/api/v1.0/random?count=10). As the API returns an array of number, try to build a new brick component that extract the first item of an array and set the item as an output.
 
 ### Objective
-We set an workflow input (a URL) and pass it into the HTTP GET component. The HTTP GET component will output an array of numbers. The array will then passed into the new component you made, extract the first item and set it as output of the component. Note that workflow differs from component and does not have output.
+We set an workflow input (a URL) and pass it into the HTTP GET component. The HTTP GET component will output an array of numbers. The array will then passed into the new component you made, extract the first item and set it as output of the component.
 
 ### Adding components
+Add required components from marketplace
 
-### Linking the components
+Add URL as workflow input parameter. Use https://www.randomnumberapi.com/api/v1.0/random?count=10 as value.
 
 ### Adding workflow inputs
+Connect the workflow URL input parameter to the HTTP GET component URL input parameter.
+
+### Linking the components
+Connect the output node from HTTP GET component to the array extraction component
 
 ### Setting Secrets
 
 ### Volume mount
+
+## Running a workflow
+See [Jobs](./jobs.md)

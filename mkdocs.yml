@@ -40,4 +40,5 @@ nav:
     - Contributing: dev_env.md
     - Architecture: arch.md
     - Add OIDC provider: oidc.md
+  - Community: community.md
   - About: about.md

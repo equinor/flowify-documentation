@@ -2,11 +2,11 @@
 
 This is the documentation repository for Floiwfy workflows manager
 
-Frontend source code https://github.com/equinor/flowify-workflows-UI
+Frontend https://github.com/equinor/flowify-workflows-UI
 
-Backend source code https://github.com/equinor/flowify-workflows-server
+Backend https://github.com/equinor/flowify-workflows-server
 
-We use [Material for MkDocs] (https://squidfunk.github.io/mkdocs-material/) for documentations 
+We use [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) for documentations 
   
   
 ## Deployment
