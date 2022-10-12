@@ -60,7 +60,7 @@ Select artifacts as input type on the left-hand pane.
 You can pass the path location of the artifact inside the container as `Args`.
 ![input artifact path](./assets/bricks/input_artifact_path.PNG)
 
-The path of the input artifact is ´/artifacts/<INPUT_PARAMETER_NAME>´. You will need to make sure the container has the permission to access the file. See [volume mount example](./bricks.md#add-volume-mount)
+The path of the input artifact is `/artifacts/<INPUT_PARAMETER_NAME>`. You will need to make sure the container has the permission to access the file. See [volume mount example](./bricks.md#add-volume-mount)
 
 #### File as output
 Select artifacts as output type on the left-hand pane. The file will be used as parameter in a workflow. Contents of the file will not be extracted.
