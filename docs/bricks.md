@@ -30,29 +30,61 @@ Example image: [`ghcr.io/equinor/flowify-component-http:0.0.1`](https://github.c
 
 As Flowify uses Argo Workflows as executor, `ENTRYPOINT` must be defined explicitly in command:
 
-`Args` are appended to the `ENTRYPOINT` command. They can be fixed (e.g. `http_method=get`) or variables from input parameters (e.g. `url=`). In this example, the full command will be 
+`Args` are appended to the `ENTRYPOINT` command. They can be a constant (e.g. `http_method=get`) or variables from input parameters (e.g. `url=`). In this example, the full command will be 
 
 `node ./src/index.js http_method=get url=<INPUT_URL_FROM_FLOWIFY_PARAMETER>`
 
+
+
+#### Setting constant parameter. (Fixed for all execution)
+![Contant parameter](./assets/bricks/constant.PNG)
+
+#### Input parameter. (Variables injected by workflow)
+![Input parameter](./assets/bricks/url.PNG)
+
+#### Setting output parameter
 The container saves the GET response under `/tmp/files/output.json`. We will need to define an output on the left pane and mapped it to results on the right pane. Flowify/Argo Workflows will extract values from the file and passes to the next component as input.
+![Output](./assets/bricks/result.PNG)
+
+#### Overview
+![brick](./assets/bricks/brick.PNG)
 
 ### Using files (Artifacts)
 Instead of parameter values, it is possible to pass data across components using a file (Artifact). It is advised to limit the usage of Artifacts in order to keep data flow lineage explicit.
 
 [An Artifact Repository](https://argoproj.github.io/argo-workflows/configure-artifact-repository/) must be configured in Argo Workflows. Flowify does not verify the configurations.
 #### File as input
+Select artifacts as input type on the left-hand pane.
+![input artifact](./assets/bricks/input_artifact.PNG)
+
+You can pass the path location of the artifact inside the container as `Args`.
+![input artifact path](./assets/bricks/input_artifact_path.PNG)
+
+The path of the input artifact is ´/artifacts/<INPUT_PARAMETER_NAME>´. You will need to make sure the container has the permission to access the file. See [volume mount example](./bricks.md#add-volume-mount)
 
 #### File as output
+Select artifacts as output type on the left-hand pane. The file will be used as parameter in a workflow. Contents of the file will not be extracted.
+![output artifact](./assets/bricks/artifact1.PNG)
+
 ### Add secrets
 To add secrets to the component, add them on the left-hand pane. The secrets will be available as Environmental variables inside the container with the same name. 
 Naming must not begin with digits and not contain spaces (use dash `_` ). It is conventional to use all uppercase characters.
+
+In this example the name of the environmental variable is `LOGIN_CREDENTIAL`. The value will be injected by a workflow.
+![Add secret](./assets/bricks/secret.PNG)
 ### Add volume mount
 Add volume mount on the left-hand pane. The mount path to the container will be `/<NAME_OF_VOLUME>`. The path value can be passed to the container using `Args` as parameter input.
 
+![Add mount](./assets/bricks/mount.PNG)
+
 If the container is run as non-root in Flowify, please make sure the container has read permission to the mount path. It can be achieved in Dockerfile for example:
+
 ```bash
 RUN mkdir /<NAME_OF_VOLUME>
 RUN chmod -R 777 /<NAME_OF_VOLUME>
 ```
+
 It is advised to limit the usage of volume mount in order to keep data flow lineage explicit.
+
 ### Versioning and modifications
+Under development
