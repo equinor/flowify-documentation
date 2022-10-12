@@ -10,6 +10,23 @@ Mounting of a volume is handled by Kubernetes. Flowify and Argo Workflows does n
 Workspace admin can create, modify and delete Volume mount. The reference to the volume mount is available to all workspace user for use in workflows.
 
 ## Add volume mount to workspace
-Go to admin page
+Go to workspace admin page. The volume name will be the name that is presented to the user to select on building workflows. The actually name of the volume as environmental variables is dictated by a [component](bricks.md#add-volume-mount).
+
+![admin page](./assets/admin/admin_page.PNG)
+
+### Setup
+|      Parameter name      |  Description |
+|:-------------:|:------:|
+|  Volume name | Name presented to users for building workflow |
+|    Drive   |   Kubernetes CSI driver |
+| Container name |    Name of Azure Blob Container (For blob csi) |
+| Mount options |    Options relavent to the CSI driver |
+| Secret name |    Name of Kubernetes secret for authentication|
+
+![Volume mount](./assets/admin/add_mount.PNG)
+
+### Add credentials for the CSI driver
+A kubernetes secret has to be manually set on the cluster in the same namespace as the workspace
+See [https://github.com/kubernetes-sigs/blob-csi-driver/blob/master/deploy/example/e2e_usage.md#option2-use-secret](https://github.com/kubernetes-sigs/blob-csi-driver/blob/master/deploy/example/e2e_usage.md#option2-use-secret)
 
 See [Components](./bricks.md#add-volume-mount) and [Workflow](./workflows.md#volume-mount) for usage

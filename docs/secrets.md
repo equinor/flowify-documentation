@@ -9,6 +9,8 @@ Workspace admin can create, modify and delete secrets. The reference to the secr
 Once a secret is added or modified, the secret value is not available to view on the frontend.
 
 ## Add secret to workspace
-Go to admin page
+Go to workspace admin page. The secret name will be the name that is presented to the user to select on building workflows. The actually name of the secret as environmental variables is dictated by a [component](bricks.md#add-secrets).
+
+![admin page](./assets/admin/admin_page.PNG)
 
 See [Components](./bricks.md#add-secrets) and [Workflow](./workflows.md#setting-secrets) for usage

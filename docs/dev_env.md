@@ -6,6 +6,6 @@ The backend is hosted at [https://github.com/equinor/flowify-workflows-server](h
 
 Documentation is hosted at [https://github.com/equinor/flowify-documentation](https://github.com/equinor/flowify-documentation)
 
-Development container is the simplest way to start. Please visit the repos for instructions.
+Please visit the repos for instructions on setting up development environment.
 
 ## Guidelines
