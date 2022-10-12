@@ -77,7 +77,7 @@ Add volume mount on the left-hand pane. The mount path to the container will be 
 
 ![Add mount](./assets/bricks/mount.PNG)
 
-If the container is run as non-root in Flowify, please make sure the container has read permission to the mount path. It can be achieved in Dockerfile for example:
+As the container is run as non-root in Flowify, make sure the container has read permission to the mount path. It can be achieved in Dockerfile for example:
 
 ```bash
 RUN mkdir /<NAME_OF_VOLUME>
