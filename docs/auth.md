@@ -3,7 +3,7 @@ Access to the frontend is controlled by a sidecar running [OAuth2 Proxy](https:/
 - JWT ID Token is set in `Authorization` header
 - JWT token contains role claims
 
-ID Token issued by the following providers are supported:
+ID Token issued by the following providers are supported by the backend server:
 
 - Azure
 

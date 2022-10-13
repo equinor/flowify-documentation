@@ -21,4 +21,6 @@ All user can create components
 All user can modify component and publish new version. It is not permitted to modify published version to avoid breaking any existing workflows.
 
 ### Delete
-Delete is not permitted to avoid breaking any existing workflows. A deprecation tag is under development.
+Workspace admin can delete component. 
+
+WARNING: It may cause breaking change to any existing workflow that use it. It should be used with cautions.

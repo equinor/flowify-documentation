@@ -43,7 +43,12 @@ As Flowify uses Argo Workflows as executor, `ENTRYPOINT` must be defined explici
 ![Input parameter](./assets/bricks/url.PNG)
 
 #### Setting output parameter
-The container saves the GET response under `/tmp/files/output.json`. We will need to define an output on the left pane and mapped it to results on the right pane. Flowify/Argo Workflows will extract values from the file and passes to the next component as input.
+Add an output on the left-hand pane and choose the correct `Type`. Use `Parameter_array` if you would like to utilize the [parallelized Map component](./map.md) feature, otherwise use `Parameter`. When using `Parameter_array`, Flowify will try to parse the output as array. The content of the output file is expected to be `[1, 2, 3]`. [More details](map.md).
+
+`Mediatype` is only for annotation purpose.
+
+The container saves the GET response under `/tmp/files/output.json`. We will need to define an output on the left-hand pane and mapped it to results on the right-hand pane. Flowify/Argo Workflows will extract values from the file and passes to the next component as input.
+
 ![Output](./assets/bricks/result.PNG)
 
 #### Overview
@@ -54,10 +59,10 @@ Instead of parameter values, it is possible to pass data across components using
 
 [An Artifact Repository](https://argoproj.github.io/argo-workflows/configure-artifact-repository/) must be configured in Argo Workflows. Flowify does not verify the configurations.
 #### File as input
-Select artifacts as input type on the left-hand pane.
+Add an component input on the left-hand pane and select artifacts as input type.
 ![input artifact](./assets/bricks/input_artifact.PNG)
 
-You can pass the path location of the artifact inside the container as `Args`.
+Pass the path location of the artifact inside the container as `Args`. In this example, the full path will be available as ``file=/artifacts/input_file` in the container run arguments.
 ![input artifact path](./assets/bricks/input_artifact_path.PNG)
 
 The path of the input artifact is `/artifacts/<INPUT_PARAMETER_NAME>`. You will need to make sure the container has the permission to access the file. See [volume mount example](./bricks.md#add-volume-mount)
@@ -72,6 +77,7 @@ Naming must not begin with digits and not contain spaces (use dash `_` ). It is 
 
 In this example the name of the environmental variable is `LOGIN_CREDENTIAL`. The value will be injected by a workflow.
 ![Add secret](./assets/bricks/secret.PNG)
+
 ### Add volume mount
 Add volume mount on the left-hand pane. The mount path to the container will be `/<NAME_OF_VOLUME>`. The path value can be passed to the container using `Args` as parameter input.
 
