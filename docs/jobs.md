@@ -6,7 +6,7 @@ You can run a workflow by on the workflow edit page or on the workspace dashboar
 
 ![Submit job from workflow editor](./assets/jobs/jobs.PNG)
 
-## Following a job status
+## Following a job
 Job status is continuously updated on the UI. There is also possibility to stop or delete a job.
 
 Stopping a running job will terminate execution on Argo Workflows and the job will be marked as terminated.

@@ -3,7 +3,7 @@ services:
   mongo:
     # one node mongoDB replica set for local development
     container_name: mongo_server
-    image: mongo:5.0
+    image: ghcr.io/equinor/flowify-mongo:latest
     restart: unless-stopped
     ports:
       - "27017:27017"

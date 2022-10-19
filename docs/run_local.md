@@ -7,11 +7,15 @@ Requirements:
 
 ```bash
 curl -Os https://raw.githubusercontent.com/equinor/flowify-documentation/main/docs/assets/docker-compose.yaml
-docker compose up
+docker compose up -d
 ```
 
 It will take 1-2 minutes for the local cluster to start. After that, the frontend will be available at http://localhost:8080
 
+By default, the database is empty. If you would like to load the example database:
+```bash
+docker exec mongo_server mongorestore dump
+```
 
 Known issues:
 
