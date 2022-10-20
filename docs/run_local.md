@@ -10,7 +10,7 @@ curl -Os https://raw.githubusercontent.com/equinor/flowify-documentation/main/do
 docker compose up -d
 ```
 
-It will take 1-2 minutes for the local cluster to start. After that, the frontend will be available at http://localhost:8080
+It will take 1-2 minutes for the local cluster to start. After that, the frontend will be available at [http://localhost:8080](http://localhost:8080)
 
 By default, the database is empty. If you would like to load the example database:
 ```bash
