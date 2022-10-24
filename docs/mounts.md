@@ -14,7 +14,7 @@ Go to workspace admin page. The volume name will be the name that is presented t
 
 ![admin page](./assets/admin/admin_page.PNG)
 
-### Setup (Primarily for Azure Blob CSI)
+### Setup (Shown example for Azure Blob CSI)
 |      Parameter name      |  Description |
 |:-------------:|:------:|
 |  Volume name | Name presented to users for building workflow |
@@ -28,6 +28,15 @@ Go to workspace admin page. The volume name will be the name that is presented t
 ### Add credentials for the CSI driver
 A kubernetes secret has to be manually set on the cluster in the same namespace as the workspace
 See [https://github.com/kubernetes-sigs/blob-csi-driver/blob/master/deploy/example/e2e_usage.md#option2-use-secret](https://github.com/kubernetes-sigs/blob-csi-driver/blob/master/deploy/example/e2e_usage.md#option2-use-secret)
+
+#### Example: Setting credentials for Azure Blob Storage
+The Kubernetes secret has to contain the following two keys:
+
+- `azurestorageaccountname`
+- `azurestorageaccountkey`
+
+[Details](https://github.com/kubernetes-sigs/blob-csi-driver/blob/master/deploy/example/e2e_usage.md#option2-bring-your-own-storage-account)
+
 
 ### Alternative setup
 It is possible to supply [`CSIVolumeSource`](https://argoproj.github.io/argo-workflows/executor_swagger/#csivolumesource) as JSON format. Flowify will append it to the Argo Workflows manifest.
