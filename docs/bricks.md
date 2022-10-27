@@ -79,15 +79,19 @@ In this example the name of the environmental variable is `LOGIN_CREDENTIAL`. Th
 ![Add secret](./assets/bricks/secret.PNG)
 
 ### Add volume mount
-Add volume mount on the left-hand pane. The mount path to the container will be `/<NAME_OF_VOLUME>`. The path value can be passed to the container using `Args` as parameter input.
+Add volume mount as brick input on the left-hand pane.
 
-![Add mount](./assets/bricks/mount.PNG)
+![Add mount](./assets/bricks/mount_input.PNG)
+
+Afterwards, add an `Args` on the right-hand pane. If leaving out prefix and suffix, the mount path to the container will be `/<NAME_OF_VOLUME_INPUT>`. The volume mount argument will not be appended to the ``docker run` arguments
+.
+![Add mount](./assets/bricks/mount_arg.PNG)
 
 As the container is run as non-root in Flowify, make sure the container has read permission to the mount path. It can be achieved in Dockerfile for example:
 
 ```bash
-RUN mkdir /<NAME_OF_VOLUME>
-RUN chmod -R 777 /<NAME_OF_VOLUME>
+RUN mkdir /<NAME_OF_VOLUME_INPUT>
+RUN chmod -R 777 /<NAME_OF_VOLUME_INPUT>
 ```
 
 It is advised to limit the usage of volume mount in order to keep data flow lineage explicit.
