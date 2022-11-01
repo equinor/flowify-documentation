@@ -8,4 +8,6 @@ Documentation is hosted at [https://github.com/equinor/flowify-documentation](ht
 
 Please visit the repos for instructions on setting up development environment.
 
-## Guidelines
+## Backlogs
+
+[https://github.com/orgs/equinor/projects/269/views/1](https://github.com/orgs/equinor/projects/269/views/1)
